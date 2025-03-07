@@ -5,7 +5,7 @@
 }
 
 :root {
---text-color: white;
+--text-color: #ffffff;
 --bg-url: url(./assets/bg-mobile.jpg);
 --stroke-color: rgba(255, 255, 255, 0.5);
 --surface-color: rgba(255, 255, 255, 0.1);
@@ -18,7 +18,7 @@
 --bg-url: url(./assets/bg-mobile-light.jpg );
 --stroke-color: rgba(0, 0, 0, 0.5);
 --surface-color: rgba(0, 0, 0, 0.5);
---branco-color: rgba(0, 0, 0, 0.1);
+--branco-color: rgba(0, 0, 0, 0.2);
 --dia-url: url(./assets/Sun.svg);
 
 }
@@ -64,12 +64,13 @@ padding: 24px;
    position: relative;
    width: 64px;
    margin: 4px auto;
+   
 }
 
 #botao button {
    width: 32px;
    height: 32px;
-   background-color: white;
+   background-color:white;
    border: 0;
    border-radius: 50%;
    background: white var(--dia-url) no-repeat center;
@@ -79,11 +80,15 @@ padding: 24px;
    right: 1;
    z-index: 1 ;
    transform: translateY(-50%);
-
+   animation: animation-back 0.8s forwards;
+   
+}
+#botao button:hover{
+   outline: 8px solid var(--branco-color);
 }
 
 .claro #botao button {
-   right: 0;
+   animation: animation 0.8s forwards;
    
 }
 
@@ -164,5 +169,22 @@ padding: 24px;
       }
    }
 
+   @keyframes animation {
+     from {
+        left: 0;
+     }
+     to {
+       left: 50%;  
+     }
+   }
+
+   @keyframes animation-back {
+      from {
+         left: 50%;
+      }
+      to{
+         left: 0;
+      }
+   }
 
 
