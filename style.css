@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+   
 }
 
 :root {
@@ -14,7 +15,7 @@
 }
 .claro {
 --text-color: black;
---bg-url: url(./assets/bg-mobile-light.jpg);
+--bg-url: url(./assets/bg-mobile-light.jpg );
 --stroke-color: rgba(0, 0, 0, 0.5);
 --surface-color: rgba(0, 0, 0, 0.5);
 --branco-color: rgba(0, 0, 0, 0.1);
@@ -24,16 +25,19 @@
 
 body {
 background: var(--bg-url)    no-repeat top center/cover;
+height: 100vh;
+ 
 }
 
 body * {
     font-family: 'inter', sans-serif;
     color: var(--text-color) ;
+    
 }
 
  #conteiner {
     
-    width: 100%;
+    width: 50%;
     max-width:588px ;
     margin: auto;
     margin-top: 56px;
@@ -147,6 +151,18 @@ padding: 24px;
    text-align: center;
    font-size: 14px;
  }
+
+
+  @media (min-width:700px) {
+
+    :root {
+      --bg-url: url(./assets/bg-desktop.jpg);
+    }
+
+      .claro {
+         --bg-url: url(./assets/bg-desktop-light.jpg);
+      }
+   }
 
 
 
